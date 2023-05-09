@@ -23,12 +23,12 @@ export default function(FunctionFactory, Model, Serializer, StylesManager, resol
    */
   return function (fhirJson, evaluateExpression = null, styleTheme = null) {
     // Need to add ordinalValue as a custom value on each answer item
-    Serializer.addProperty('itemvalue', 'ordinalValue:number');
-    Serializer.addProperty('itemvalue', 'valueCodingCode:string');
-    Serializer.addProperty('itemvalue', 'valueCodingSystem:string');
-    Serializer.addProperty('itemvalue', 'valueCodingDisplay:string');
-    Serializer.addProperty('itemvalue', 'valueType:string');
-    Serializer.addProperty('survey', { 
+    Serializer?.addProperty('itemvalue', 'ordinalValue:number');
+    Serializer?.addProperty('itemvalue', 'valueCodingCode:string');
+    Serializer?.addProperty('itemvalue', 'valueCodingSystem:string');
+    Serializer?.addProperty('itemvalue', 'valueCodingDisplay:string');
+    Serializer?.addProperty('itemvalue', 'valueType:string');
+    Serializer?.addProperty('survey', { 
       name: 'questionnaireUrl:string',
       default: fhirJson?.url, 
       category: 'general' 
